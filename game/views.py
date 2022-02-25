@@ -12,6 +12,8 @@ def index(request):
         )
     return render(request, "index.html", {})
 
+def dice(request):
+    return render(request, "rolling_dice.html")
 
 def game(request, room_code):
     choice = request.GET.get("choice")
