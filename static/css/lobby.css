@@ -46,8 +46,8 @@ button {
     width: 128px;
     height: 128px;
     vertical-align: middle;
-    top: 0px;
-    left: 45%;
+    top: 125px;
+    left: 46.6%;
     position: fixed;
     z-index: 100;
 }
@@ -56,7 +56,8 @@ button {
     content: ' ';
     display: block;
     position: fixed;
-    left: 45%;
+    left: 46.6%;
+    top: 125px;
     height: 128px;
     width: 128px;
     background-size: 128px 128px;
