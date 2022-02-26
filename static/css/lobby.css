@@ -1,0 +1,65 @@
+.heading {
+    font-size: 15px;
+    color: black;
+}
+
+
+#create-card-container {
+    width: 432px;
+    padding: 16px 20px 20px;
+    display: flex;
+    position: relative;
+    overflow: inherit;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.card-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.subtext {
+    text-align: center;
+}
+
+button {
+
+}
+
+.description {
+    text-align: center;
+    color: black;
+}
+
+.small_description {
+    color:black;
+    font-size: 10px;
+}
+
+#user-avatar {
+    background: #ccc;
+    border-radius: 68px;
+    border: 4px solid #fff;
+    width: 128px;
+    height: 128px;
+    vertical-align: middle;
+    top: 0px;
+    left: 45%;
+    position: fixed;
+    z-index: 100;
+}
+
+#user-avatar:before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    left: 45%;
+    height: 128px;
+    width: 128px;
+    background-size: 128px 128px;
+    background-image: url("/static/images/default_avatar.png");
+    z-index:100;
+}

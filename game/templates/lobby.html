@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Monopoly {% endblock %}
+
+{% block files %}
+<link rel="stylesheet" href="{% static 'css/lobby.css' %}" xmlns="http://www.w3.org/1999/html">
+<script src="{% static 'js/views/lobby.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<div id="create-card-container" class="card">
+  <input id="user-name" value="{{ request.user.username }}" hidden>
+    <div class="card-blur-container">
+        <div class="card-blur"></div>
+    </div>
+    <div class="card-content-container">
+      <a href="/profile/{{ user.name }}" target="_blank">
+            <img id="user-avatar" src="{{ user.avatar }}">
+        </a>
+        <h2 class="heading">Create/Join a game</h2>
+        <p class="description">Enter a Game Code</p>
+        <p class="small_description">if it doesnt exist it will create one for you!</p>
+        <form method="POST">
+    {% csrf_token %}
+    <div class='form-control'>
+      <label for="room">Room id</label>
+      <input id="room" type="text" name="room_code" required />
+    </div>
+    <div class='form-control'>
+      <label for="character_choice">Your character</label>
+      <select for="character_choice" name="character_choice">
+        <option value="X">X</option>
+        <option value="O">O</option>
+      </select>
+    </div>
+    <input type="submit" class="button" value="Start Game" />
+  </form>
+    </div>
+</div>
+    {% endblock %}
